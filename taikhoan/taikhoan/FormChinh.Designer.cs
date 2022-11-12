@@ -50,6 +50,8 @@
             this.btn_them = new System.Windows.Forms.Button();
             this.btn_timkiem = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
+            this.label7 = new System.Windows.Forms.Label();
+            this.tb_manv = new System.Windows.Forms.TextBox();
             ((System.ComponentModel.ISupportInitialize)(this.luoidulieu)).BeginInit();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
@@ -135,6 +137,7 @@
             this.tb_pass.Name = "tb_pass";
             this.tb_pass.Size = new System.Drawing.Size(172, 22);
             this.tb_pass.TabIndex = 6;
+            this.tb_pass.UseSystemPasswordChar = true;
             // 
             // label4
             // 
@@ -173,11 +176,11 @@
             this.luoidulieu.BackgroundColor = System.Drawing.SystemColors.ControlLight;
             this.luoidulieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.luoidulieu.GridColor = System.Drawing.SystemColors.ActiveCaption;
-            this.luoidulieu.Location = new System.Drawing.Point(109, 260);
+            this.luoidulieu.Location = new System.Drawing.Point(88, 287);
             this.luoidulieu.Name = "luoidulieu";
             this.luoidulieu.RowHeadersWidth = 51;
             this.luoidulieu.RowTemplate.Height = 24;
-            this.luoidulieu.Size = new System.Drawing.Size(640, 150);
+            this.luoidulieu.Size = new System.Drawing.Size(690, 123);
             this.luoidulieu.TabIndex = 7;
             this.luoidulieu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.luoidulieu_CellContentClick);
             // 
@@ -267,6 +270,22 @@
             this.label6.TabIndex = 10;
             this.label6.Text = "Tìm kiếm:";
             // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Location = new System.Drawing.Point(267, 257);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(89, 16);
+            this.label7.TabIndex = 5;
+            this.label7.Text = "Mã nhân viên:";
+            // 
+            // tb_manv
+            // 
+            this.tb_manv.Location = new System.Drawing.Point(386, 251);
+            this.tb_manv.Name = "tb_manv";
+            this.tb_manv.Size = new System.Drawing.Size(172, 22);
+            this.tb_manv.TabIndex = 6;
+            // 
             // FormChinh
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
@@ -278,7 +297,9 @@
             this.Controls.Add(this.luoidulieu);
             this.Controls.Add(this.tb_quyen);
             this.Controls.Add(this.label5);
+            this.Controls.Add(this.tb_manv);
             this.Controls.Add(this.tb_name);
+            this.Controls.Add(this.label7);
             this.Controls.Add(this.label4);
             this.Controls.Add(this.tb_pass);
             this.Controls.Add(this.label3);
@@ -323,5 +344,7 @@
         private System.Windows.Forms.Button btn_them;
         private System.Windows.Forms.TextBox btn_timkiem;
         private System.Windows.Forms.Label label6;
+        private System.Windows.Forms.Label label7;
+        private System.Windows.Forms.TextBox tb_manv;
     }
 }

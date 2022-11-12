@@ -64,6 +64,7 @@ namespace taikhoan
             tb_pass.Text = "";
             tb_username.Text = "";
             tb_quyen.Text = "";
+            tb_manv.Text = "";
         }
 
         //xóa
@@ -81,12 +82,13 @@ namespace taikhoan
         //them
         private void btn_them_Click(object sender, EventArgs e)
         {
-            string username = tb_username.Text;
+             string username = tb_username.Text;
             string password = tb_pass.Text;
             string ten = tb_name.Text;
             string quyen = tb_quyen.Text;
+            string manv = tb_manv.Text;
 
-            SqlCommand sql_them = new SqlCommand("INSERT INTO dbo.TaiKhoan VALUES " + "('"+ tb_username.Text + "', '"+ tb_pass.Text + "', '"+ tb_name.Text + "', '"+ tb_quyen.Text + "')", conn);
+            SqlCommand sql_them = new SqlCommand("INSERT INTO dbo.TaiKhoan VALUES " + "('"+ tb_username.Text + "', '"+ tb_pass.Text + "', '"+ tb_name.Text + "', '"+ tb_quyen.Text + "', '"+ tb_manv.Text + "')", conn);
             sql_them.ExecuteNonQuery();
             MessageBox.Show("Thêm thành công");
             HienthiDuLieu("SELECT * FROM dbo.TaiKhoan", luoidulieu);
@@ -116,6 +118,7 @@ namespace taikhoan
             tb_pass.Text = luoidulieu.Rows[e.RowIndex].Cells[1].Value.ToString();
             tb_name.Text = luoidulieu.Rows[e.RowIndex].Cells[2].Value.ToString();
             tb_quyen.Text = luoidulieu.Rows[e.RowIndex].Cells[3].Value.ToString();
+            tb_manv.Text = luoidulieu.Rows[e.RowIndex].Cells[4].Value.ToString();
         }
 
        
