@@ -46,6 +46,24 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="BangCongNVCB.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BangCongNVCB.Designer.cs">
+      <DependentUpon>BangCongNVCB.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BangLuongCty.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BangLuongCty.Designer.cs">
+      <DependentUpon>BangLuongCty.cs</DependentUpon>
+    </Compile>
+    <Compile Include="BoPhan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="BoPhan.Designer.cs">
+      <DependentUpon>BoPhan.cs</DependentUpon>
+    </Compile>
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -58,13 +76,52 @@
     <Compile Include="FormChinh.Designer.cs">
       <DependentUpon>FormChinh.cs</DependentUpon>
     </Compile>
+    <Compile Include="LuongNVTV.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LuongNVTV.Designer.cs">
+      <DependentUpon>LuongNVTV.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Phongban.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Phongban.Designer.cs">
+      <DependentUpon>Phongban.cs</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QUANLY.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="QUANLY.Designer.cs">
+      <DependentUpon>QUANLY.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TangLuong.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TangLuong.Designer.cs">
+      <DependentUpon>TangLuong.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="BangCongNVCB.resx">
+      <DependentUpon>BangCongNVCB.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BangLuongCty.resx">
+      <DependentUpon>BangLuongCty.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="BoPhan.resx">
+      <DependentUpon>BoPhan.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="FormChinh.resx">
       <DependentUpon>FormChinh.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LuongNVTV.resx">
+      <DependentUpon>LuongNVTV.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Phongban.resx">
+      <DependentUpon>Phongban.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
@@ -75,6 +132,12 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="QUANLY.resx">
+      <DependentUpon>QUANLY.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TangLuong.resx">
+      <DependentUpon>TangLuong.cs</DependentUpon>
+    </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

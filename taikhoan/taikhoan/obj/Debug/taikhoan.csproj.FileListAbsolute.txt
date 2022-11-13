@@ -22,3 +22,22 @@ E:\Lập trình ứng dụng\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.c
 E:\Lập trình ứng dụng\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.CoreCompileInputs.cache
 E:\Lập trình ứng dụng\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.exe
 E:\Lập trình ứng dụng\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.pdb
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\bin\Debug\taikhoan.exe.config
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\bin\Debug\taikhoan.exe
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\bin\Debug\taikhoan.pdb
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.AssemblyReference.cache
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.SuggestedBindingRedirects.cache
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.Form1.resources
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.FormChinh.resources
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.Properties.Resources.resources
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.GenerateResource.cache
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.CoreCompileInputs.cache
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.exe
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.pdb
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.QUANLY.resources
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.BoPhan.resources
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.Phongban.resources
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.LuongNVTV.resources
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.BangCongNVCB.resources
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.BangLuongCty.resources
+C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.TangLuong.resources

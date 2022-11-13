@@ -17,7 +17,7 @@ namespace taikhoan
         public SqlConnection conn;
         public void Ketnoi()
         {
-            string chuoiketnoi = "Server = DESKTOP-AU8JLMO; Database = QLNS; integrated security= True";
+            string chuoiketnoi = "Server = DESKTOP-JC1GAQM\\SQLEXPRESS; Database = QLNS; integrated security= True";
             conn = new SqlConnection(chuoiketnoi);
             conn.Open();
 
@@ -82,7 +82,7 @@ namespace taikhoan
         //them
         private void btn_them_Click(object sender, EventArgs e)
         {
-             string username = tb_username.Text;
+            string username = tb_username.Text;
             string password = tb_pass.Text;
             string ten = tb_name.Text;
             string quyen = tb_quyen.Text;
@@ -132,6 +132,12 @@ namespace taikhoan
                 HienthiDuLieu(cautruyvan, luoidulieu);
 
             }
+        }
+
+        private void btn_quanly_Click(object sender, EventArgs e)
+        {
+            QUANLY qly = new QUANLY();
+            qly.Show();
         }
     }
 }
