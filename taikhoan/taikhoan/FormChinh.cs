@@ -17,7 +17,7 @@ namespace taikhoan
         public SqlConnection conn;
         public void Ketnoi()
         {
-            string chuoiketnoi = "Server = DESKTOP - 9B63BU9\\SQLEXPRESS; Database = QLNS; integrated security = True";
+            string chuoiketnoi = "Server = DESKTOP-JC1GAQM\\SQLEXPRESS; Database = QLNS; integrated security = True";
             conn = new SqlConnection(chuoiketnoi);
             conn.Open();
 
@@ -134,21 +134,49 @@ namespace taikhoan
             }
         }
 
-        private void btn_quanly_Click(object sender, EventArgs e)
-        {
-            QUANLY qly = new QUANLY();
-            qly.Show();
-        }
+        
 
         private void tb_username_TextChanged(object sender, EventArgs e)
         {
 
         }
 
-        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
+        
+
+        private void searchToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            QUANLY qly = new QUANLY();
-            qly.Show();
+            BoPhan bphan = new BoPhan();
+            bphan.Show();
+        }
+
+        private void indexToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Phongban pban = new Phongban();
+            pban.Show();
+        }
+
+        private void nhânViênThửViệcToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            LuongNVTV nvtv = new LuongNVTV();
+            nvtv.Show();
+        }
+
+        private void nhânViênToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            BangCongNVCB nvcb = new BangCongNVCB();
+            nvcb.Show();
+        }
+
+        private void bảngLươngCôngTyToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            BangLuongCty cty = new BangLuongCty();
+            cty.Show();
+        }
+
+        private void tăngLươngToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            TangLuong tluong = new TangLuong();
+            tluong.Show();
         }
     }
 }

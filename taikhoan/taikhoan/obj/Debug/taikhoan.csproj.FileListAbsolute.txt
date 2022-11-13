@@ -34,7 +34,6 @@ C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taik
 C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.CoreCompileInputs.cache
 C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.exe
 C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.pdb
-C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.QUANLY.resources
 C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.BoPhan.resources
 C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.Phongban.resources
 C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.LuongNVTV.resources
