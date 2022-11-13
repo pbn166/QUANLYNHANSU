@@ -17,7 +17,7 @@ namespace taikhoan
         public SqlConnection conn;
         public void Ketnoi()
         {
-            string chuoiketnoi = "Server = DESKTOP-JC1GAQM\\SQLEXPRESS; Database = QLNS; integrated security= True";
+            string chuoiketnoi = "Server = DESKTOP - 9B63BU9\\SQLEXPRESS; Database = QLNS; integrated security = True";
             conn = new SqlConnection(chuoiketnoi);
             conn.Open();
 
@@ -135,6 +135,17 @@ namespace taikhoan
         }
 
         private void btn_quanly_Click(object sender, EventArgs e)
+        {
+            QUANLY qly = new QUANLY();
+            qly.Show();
+        }
+
+        private void tb_username_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void helpToolStripMenuItem_Click(object sender, EventArgs e)
         {
             QUANLY qly = new QUANLY();
             qly.Show();
