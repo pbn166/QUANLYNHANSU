@@ -82,7 +82,7 @@ namespace taikhoan
             string noicapso = textBox4.Text;
             string ghichu = textBox5.Text;
 
-            string sql_sua = "UPDATE SoBH SET  MaLuong='" + maluong + "', MaSoBH='" + mabaohiem + "', NgayCapSo='" + ngaycapso + "', NoiCapSo='" + noicapso + "', GhiChu='" + ghichu + "'";
+            string sql_sua = "UPDATE SoBH SET   MaSoBH='" + mabaohiem + "', NgayCapSo='" + ngaycapso + "', NoiCapSo='" + noicapso + "', GhiChu='" + ghichu + "'  WHERE MaLuong='" + maluong + "' ";
             SqlCommand a = new SqlCommand(sql_sua, conn);
 
             a.ExecuteNonQuery();
