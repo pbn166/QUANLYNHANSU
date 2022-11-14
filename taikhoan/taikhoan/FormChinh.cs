@@ -17,7 +17,7 @@ namespace taikhoan
         public SqlConnection conn;
         public void Ketnoi()
         {
-            string chuoiketnoi = "Server = DESKTOP-JC1GAQM\\SQLEXPRESS; Database = QLNS; integrated security = True";
+            string chuoiketnoi = "Server = DESKTOP-VSFCU84; Database = QLNS; integrated security= True";
             conn = new SqlConnection(chuoiketnoi);
             conn.Open();
 
@@ -149,11 +149,11 @@ namespace taikhoan
             bphan.Show();
         }
 
-        private void indexToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            Phongban pban = new Phongban();
-            pban.Show();
-        }
+        //private void indexToolStripMenuItem_Click(object sender, EventArgs e)
+        //{
+        //    Phongban pban = new Phongban();
+        //    pban.Show();
+        //}
 
         private void nhânViênThửViệcToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -177,6 +177,52 @@ namespace taikhoan
         {
             TangLuong tluong = new TangLuong();
             tluong.Show();
+        }
+
+       // private void indexToolStripMenuItem_Click(object sender, EventArgs e)
+      //  {
+      //      Phongban pb = new Phongban();
+       //     pb.Show();
+      //  }
+
+        private void phòngBanToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            Phongban pb = new Phongban();
+            pb.Show();
+        }
+
+        private void đăngNhậpToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void toolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            qlnhansu hs = new qlnhansu();
+            hs.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void toolStripMenuItem3_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            baohiem hs = new baohiem();
+            hs.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void toolStripMenuItem4_Click(object sender, EventArgs e)
+        {
+            this.Visible = false;
+            hosothuviec hs = new hosothuviec();
+            hs.ShowDialog();
+            this.Visible = true;
+        }
+
+        private void quảnLýTàiKhoảnToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

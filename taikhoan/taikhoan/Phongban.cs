@@ -16,8 +16,7 @@ namespace taikhoan
         public SqlConnection conn;
         public void Ketnoi()
         {
-            string chuoiketnoi = "Server = DESKTOP-JC1GAQM\\SQLEXPRESS; Database = QLNS; integrated security= True";
-            conn = new SqlConnection(chuoiketnoi);
+            string chuoiketnoi = "Server = DESKTOP-VSFCU84; Database = QLNS; integrated security= True";
             conn.Open();
 
         }
@@ -38,7 +37,7 @@ namespace taikhoan
         private void Phongban_Load(object sender, EventArgs e)
         {
             Ketnoi();
-            HienthiDuLieu("SELECT * FROM dbo.PhongBan", luoidulieu);
+            HienthiDuLieu("SELECT * FROM PhongBan", luoidulieu);
         }
 
         private void btn_them_Click(object sender, EventArgs e)

@@ -40,3 +40,24 @@ C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taik
 C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.BangCongNVCB.resources
 C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.BangLuongCty.resources
 C:\Users\huynh\OneDrive\Máy tính\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.TangLuong.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\bin\Debug\taikhoan.exe.config
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\bin\Debug\taikhoan.exe
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\bin\Debug\taikhoan.pdb
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.AssemblyReference.cache
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.SuggestedBindingRedirects.cache
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.BangCongNVCB.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.BangLuongCty.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.BoPhan.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.Form1.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.FormChinh.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.LuongNVTV.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.Phongban.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.Properties.Resources.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.TangLuong.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.GenerateResource.cache
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.csproj.CoreCompileInputs.cache
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.exe
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.pdb
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.baohiem.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.hosothuviec.resources
+C:\Users\84888\Documents\GitHub\QUANLYNHANSU\taikhoan\taikhoan\obj\Debug\taikhoan.qlnhansu.resources
