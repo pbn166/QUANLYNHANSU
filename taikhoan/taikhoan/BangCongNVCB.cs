@@ -16,7 +16,7 @@ namespace taikhoan
         public SqlConnection conn;
         public void Ketnoi()
         {
-            string chuoiketnoi = "Server = DESKTOP-VSFCU84; Database = QLNS; integrated security= True";
+            string chuoiketnoi = "Server = DESKTOP-JC1GAQM\\SQLEXPRESS; Database = QLNS; integrated security= True";
             conn = new SqlConnection(chuoiketnoi);
             conn.Open();
 
@@ -25,9 +25,9 @@ namespace taikhoan
         {
             SqlDataAdapter da = new SqlDataAdapter(cautruyvan, conn);
             DataSet ds = new DataSet();
-            da.Fill(ds, "DSLNV");
+            da.Fill(ds, "DSBC");
             dg.DataSource = ds;
-            dg.DataMember = "DSLNV";
+            dg.DataMember = "DSBC";
 
         }
         public BangCongNVCB()
@@ -48,7 +48,7 @@ namespace taikhoan
             string SoNgayCong = tb_songaycong.Text;
             string SoNgayNghi = tb_songaycong.Text;
             string SoNgayLamThemNV = tb_songaylamthem.Text;
-            string NgayBD = tb_ngaybatdau.Text;
+            string NgayBD = tb_ngaybatdau.Value.Date.ToShortDateString();
             string GhiChu = tb_ghichu.Text;
 
 
@@ -77,10 +77,10 @@ namespace taikhoan
             string SoNgayCong = tb_songaycong.Text;
             string SoNgayNghi = tb_songaycong.Text;
             string SoNgayLamThemNV = tb_songaylamthem.Text;
-            string NgayBD = tb_ngaybatdau.Text;
+            string NgayBD = tb_ngaybatdau.Value.Date.ToShortDateString();
             string GhiChu = tb_ghichu.Text;
 
-            string sql_sua = "UPDATE dbo.BangCongNVCB SET MaNV = '"+MaNV+"', MaPhong = '"+MaPhong+"', MaLuong = '"+MaLuong+"', LCB = '"+LCB+"', PhuCapKhac = '"+PhuCapKhac+"', KhenThuong = '"+KhenThuong+"', KyLuat = '"+KyLuat+"', SoNgayCong = '"+SoNgayCong+"', SoNgayNghi = '"+SoNgayNghi+"', SoNgayLamThemNV = '"+SoNgayLamThemNV+"', NgayBD = '"+NgayBD+"', GhiChu = '"+GhiChu+"'  ";
+            string sql_sua = "UPDATE dbo.BangCongNVCB SET MaNV = '"+MaNV+"', MaPhong = '"+MaPhong+"', MaLuong = '"+MaLuong+"', LCB = '"+LCB+"',PhuCapCV = '"+PhuCapCV+"', PhuCapKhac = '"+PhuCapKhac+"', KhenThuong = '"+KhenThuong+"', KyLuat = '"+KyLuat+"', SoNgayCong = '"+SoNgayCong+"', SoNgayNghi = '"+SoNgayNghi+"', SoNgayLamThemNV = '"+SoNgayLamThemNV+"', NgayBD = '"+NgayBD+"', GhiChu = '"+GhiChu+"'  ";
             SqlCommand a = new SqlCommand(sql_sua, conn);
 
             a.ExecuteNonQuery();
@@ -123,6 +123,18 @@ namespace taikhoan
             tb_songaylamthem.Text = luoidulieu.Rows[e.RowIndex].Cells[10].Value.ToString();
             tb_ngaybatdau.Text = luoidulieu.Rows[e.RowIndex].Cells[11].Value.ToString();
             tb_ghichu.Text = luoidulieu.Rows[e.RowIndex].Cells[12].Value.ToString();
+        }
+
+        private void bt_tinhluong_Click(object sender, EventArgs e)
+        {
+            int lcb = Convert.ToInt32(tb_luongcb.Text);
+            int pccv = Convert.ToInt32(tb_phucapcv.Text);
+            int pck = Convert.ToInt32(tb_phucapkhac.Text);
+            int kt = Convert.ToInt32(tb_khenthuong.Text);
+            int snc = Convert.ToInt32(tb_songaycong.Text);
+            int lt = Convert.ToInt32(tb_songaylamthem.Text);
+            float luong = (((lcb / 26) * snc + (lt * 40000)) + pccv + pck + kt);
+            tb_luong.Text = luong.ToString();
         }
     }
 }

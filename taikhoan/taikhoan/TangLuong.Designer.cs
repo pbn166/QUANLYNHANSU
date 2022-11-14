@@ -33,7 +33,6 @@
             this.textBox4 = new System.Windows.Forms.TextBox();
             this.textBox3 = new System.Windows.Forms.TextBox();
             this.tb_manv = new System.Windows.Forms.Label();
-            this.tb_ngaysua = new System.Windows.Forms.TextBox();
             this.tb_lydo = new System.Windows.Forms.Label();
             this.tb_maluongmoi = new System.Windows.Forms.TextBox();
             this.label3 = new System.Windows.Forms.Label();
@@ -44,6 +43,7 @@
             this.btn_sua = new System.Windows.Forms.Button();
             this.btn_them = new System.Windows.Forms.Button();
             this.luoidulieu = new System.Windows.Forms.DataGridView();
+            this.tb_ngaysua = new System.Windows.Forms.DateTimePicker();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.luoidulieu)).BeginInit();
@@ -61,10 +61,10 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tb_ngaysua);
             this.groupBox1.Controls.Add(this.textBox4);
             this.groupBox1.Controls.Add(this.textBox3);
             this.groupBox1.Controls.Add(this.tb_manv);
-            this.groupBox1.Controls.Add(this.tb_ngaysua);
             this.groupBox1.Controls.Add(this.tb_lydo);
             this.groupBox1.Controls.Add(this.tb_maluongmoi);
             this.groupBox1.Controls.Add(this.label3);
@@ -98,13 +98,6 @@
             this.tb_manv.Size = new System.Drawing.Size(145, 25);
             this.tb_manv.TabIndex = 0;
             this.tb_manv.Text = "Mã Nhân viên";
-            // 
-            // tb_ngaysua
-            // 
-            this.tb_ngaysua.Location = new System.Drawing.Point(241, 141);
-            this.tb_ngaysua.Name = "tb_ngaysua";
-            this.tb_ngaysua.Size = new System.Drawing.Size(235, 31);
-            this.tb_ngaysua.TabIndex = 1;
             // 
             // tb_lydo
             // 
@@ -209,6 +202,13 @@
             this.luoidulieu.TabIndex = 3;
             this.luoidulieu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.luoidulieu_CellContentClick);
             // 
+            // tb_ngaysua
+            // 
+            this.tb_ngaysua.Location = new System.Drawing.Point(241, 144);
+            this.tb_ngaysua.Name = "tb_ngaysua";
+            this.tb_ngaysua.Size = new System.Drawing.Size(235, 31);
+            this.tb_ngaysua.TabIndex = 2;
+            // 
             // TangLuong
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 25F);
@@ -239,7 +239,6 @@
         private System.Windows.Forms.TextBox textBox4;
         private System.Windows.Forms.TextBox textBox3;
         private System.Windows.Forms.Label tb_manv;
-        private System.Windows.Forms.TextBox tb_ngaysua;
         private System.Windows.Forms.Label tb_lydo;
         private System.Windows.Forms.TextBox tb_maluongmoi;
         private System.Windows.Forms.Label label3;
@@ -248,5 +247,6 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_them;
+        private System.Windows.Forms.DateTimePicker tb_ngaysua;
     }
 }

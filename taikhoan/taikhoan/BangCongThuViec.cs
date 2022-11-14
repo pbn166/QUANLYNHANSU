@@ -8,6 +8,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using static System.Windows.Forms.VisualStyles.VisualStyleElement;
 
 namespace taikhoan
 {
@@ -16,7 +17,7 @@ namespace taikhoan
         public SqlConnection conn;
         public void Ketnoi()
         {
-            string chuoiketnoi = "Server = DESKTOP-VSFCU84; Database = QLNS; integrated security= True";
+            string chuoiketnoi = "Server = DESKTOP-JC1GAQM\\SQLEXPRESS; Database = QLNS; integrated security= True";
             conn = new SqlConnection(chuoiketnoi);
             conn.Open();
 
@@ -35,23 +36,20 @@ namespace taikhoan
             InitializeComponent();
         }
 
-        private void LuongNVTV_Load(object sender, EventArgs e)
-        {
-            Ketnoi();
-            HienthiDuLieu("SELECT * FROM dbo.BangCongThuViec", luoidulieu);
-        }
+        
 
         private void thembtn__Click(object sender, EventArgs e)
         {
-            string MaNVTV = tb_manvtv.Text;
+            
             string SoNgayCong = tb_songaycong.Text;
             string SoNgayNghi = tb_songaynghi.Text;
             string SoGioLamThem = tb_sogiolamthem.Text;
             string LuongTV = tb_luongthuviec.Text;
             string Luong = tb_luong.Text;
             string GhiChu = tb_ghichu.Text;
+            string MaNVTV = tb_manvtv.Text;
 
-            SqlCommand sql_them = new SqlCommand("INSERT INTO dbo.BangCongThuViec VALUES " + "('" + tb_ghichu.Text + "','" + tb_luong.Text + "', '" + tb_luongthuviec.Text + "', '" + tb_manvtv.Text + "', '" + tb_sogiolamthem.Text + "', '"+tb_songaycong.Text+"', '"+tb_songaynghi.Text+"')", conn);
+            SqlCommand sql_them = new SqlCommand("INSERT INTO dbo.BangCongThuViec VALUES " + "('" + SoNgayCong + "','" + SoNgayNghi+ "', '" + SoGioLamThem + "', '" + LuongTV + "', '" + Luong + "', '"+GhiChu+"', '"+MaNVTV+"')", conn);
             sql_them.ExecuteNonQuery();
             MessageBox.Show("Thêm thành công");
             HienthiDuLieu("SELECT * FROM dbo.BangCongThuViec", luoidulieu);
@@ -59,15 +57,15 @@ namespace taikhoan
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            string MaNVTV = tb_manvtv.Text;
             string SoNgayCong = tb_songaycong.Text;
             string SoNgayNghi = tb_songaynghi.Text;
             string SoGioLamThem = tb_sogiolamthem.Text;
             string LuongTV = tb_luongthuviec.Text;
             string Luong = tb_luong.Text;
             string GhiChu = tb_ghichu.Text;
+            string MaNVTV = tb_manvtv.Text;
 
-            string sql_sua = "UPDATE dbo.BangCongThuViec SET MaNVTV = '" + MaNVTV + "', SoNgayCong ='" + SoNgayCong + "', SoNgayNghi ='" + SoNgayNghi + "', SoGioLamThem = '" + SoGioLamThem + "', LuongTV = '"+LuongTV+"', Luong = '"+Luong+"', GhiChu = '"+GhiChu+"' ";
+            string sql_sua = "UPDATE dbo.BangCongThuViec SET SoNgayCong = '" + SoNgayCong + "', SoNgayNghi = '"+SoNgayNghi+"',SoGioLamThem ='" + SoGioLamThem + "', LuongTV ='" + LuongTV + "', Luong = '" + Luong + "', GhiChu = '"+GhiChu+"' , MaNVTV = '"+MaNVTV+"' ";
             SqlCommand a = new SqlCommand(sql_sua, conn);
 
             a.ExecuteNonQuery();
@@ -104,6 +102,21 @@ namespace taikhoan
             tb_luong.Text = luoidulieu.Rows[e.RowIndex].Cells[4].Value.ToString();
             tb_ghichu.Text = luoidulieu.Rows[e.RowIndex].Cells[5].Value.ToString();
             tb_manvtv.Text = luoidulieu.Rows[e.RowIndex].Cells[6].Value.ToString();
+        }
+
+        private void LuongNVTV_Load(object sender, EventArgs e)
+        {
+            Ketnoi();
+            HienthiDuLieu("SELECT * FROM dbo.BangCongThuViec", luoidulieu);
+        }
+
+        private void bt_tinhluong_Click(object sender, EventArgs e)
+        {
+            int l = Convert.ToInt32(tb_luong.Text);
+            int nc = Convert.ToInt32(tb_songaycong.Text);
+            int lt = Convert.ToInt32(tb_sogiolamthem.Text);
+            float luong = ((l / 26) * nc + (lt * 40000));
+            tb_luong.Text = luong.ToString();
         }
     }
 }

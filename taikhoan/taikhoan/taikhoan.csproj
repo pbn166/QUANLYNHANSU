@@ -52,11 +52,11 @@
     <Compile Include="BangCongNVCB.Designer.cs">
       <DependentUpon>BangCongNVCB.cs</DependentUpon>
     </Compile>
-    <Compile Include="BangLuongCty.cs">
+    <Compile Include="BangLuongCTy.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="BangLuongCty.Designer.cs">
-      <DependentUpon>BangLuongCty.cs</DependentUpon>
+    <Compile Include="BangLuongCTy.Designer.cs">
+      <DependentUpon>BangLuongCTy.cs</DependentUpon>
     </Compile>
     <Compile Include="baohiem.cs">
       <SubType>Form</SubType>
@@ -88,17 +88,18 @@
     <Compile Include="hosothuviec.designer.cs">
       <DependentUpon>hosothuviec.cs</DependentUpon>
     </Compile>
-    <Compile Include="LuongNVTV.cs">
+    <Compile Include="BangCongThuViec.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="LuongNVTV.Designer.cs">
-      <DependentUpon>LuongNVTV.cs</DependentUpon>
-    </Compile>
-    <Compile Include="Phongban.cs">
+    <Compile Include=".Designer.cs">
+      <DependentUpon>BangCongThuViec.cs</DependentUpon>
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Phongban.Designer.cs">
-      <DependentUpon>Phongban.cs</DependentUpon>
+    <Compile Include="PhongBan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PhongBan.Designer.cs">
+      <DependentUpon>PhongBan.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -117,8 +118,8 @@
     <EmbeddedResource Include="BangCongNVCB.resx">
       <DependentUpon>BangCongNVCB.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="BangLuongCty.resx">
-      <DependentUpon>BangLuongCty.cs</DependentUpon>
+    <EmbeddedResource Include="BangLuongCTy.resx">
+      <DependentUpon>BangLuongCTy.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="baohiem.resx">
       <DependentUpon>baohiem.cs</DependentUpon>
@@ -135,11 +136,11 @@
     <EmbeddedResource Include="hosothuviec.resx">
       <DependentUpon>hosothuviec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="LuongNVTV.resx">
-      <DependentUpon>LuongNVTV.cs</DependentUpon>
+    <EmbeddedResource Include="BangCongThuViec.resx">
+      <DependentUpon>BangCongThuViec.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Phongban.resx">
-      <DependentUpon>Phongban.cs</DependentUpon>
+    <EmbeddedResource Include="PhongBan.resx">
+      <DependentUpon>PhongBan.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>

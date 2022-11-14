@@ -16,7 +16,7 @@ namespace taikhoan
         public SqlConnection conn;
         public void Ketnoi()
         {
-            string chuoiketnoi = "Server = DESKTOP-VSFCU84; Database = QLNS; integrated security= True";
+            string chuoiketnoi = "Server = DESKTOP-JC1GAQM\\SQLEXPRESS; Database = QLNS; integrated security= True";
             conn = new SqlConnection(chuoiketnoi);
             conn.Open();
 
@@ -53,10 +53,10 @@ namespace taikhoan
         {
             string MaBoPhan = tb_mabp.Text;
             string TenBoPhan = tb_tenbp.Text;
-            string NgayThanhLap = dt_ngaythanhlap.Text;
+            string NgayThanhLap = dt_ngaythanhlap.Value.Date.ToShortDateString(); 
             string GhiChu = tb_ghichu.Text;
 
-            SqlCommand sql_them = new SqlCommand("INSERT INTO dbo.BoPhan VALUES " + "('" + tb_mabp.Text + "', '" + tb_tenbp.Text + "', '" + dt_ngaythanhlap.Text + "', '" + tb_ghichu.Text + "')", conn);
+            SqlCommand sql_them = new SqlCommand("INSERT INTO dbo.BoPhan VALUES " + "('" + MaBoPhan + "', '" + TenBoPhan + "', '" + NgayThanhLap + "', '" + GhiChu + "')", conn);
             sql_them.ExecuteNonQuery();
             MessageBox.Show("Thêm thành công");
             HienthiDuLieu("SELECT * FROM dbo.BoPhan", luoidulieu);
@@ -66,10 +66,10 @@ namespace taikhoan
         {
             string MaBoPhan = tb_mabp.Text;
             string TenBoPhan = tb_tenbp.Text;
-            string NgayThanhLap = dt_ngaythanhlap.Text;
+            string NgayThanhLap = dt_ngaythanhlap.Value.Date.ToShortDateString(); 
             string GhiChu = tb_ghichu.Text;
 
-            string sql_sua = "UPDATE dbo.BoPhan SET TenBoPhan='" + TenBoPhan + "', NgayThanhLap ='" + NgayThanhLap + "' WHERE MaBoPhan='" + MaBoPhan + "' ";
+            string sql_sua = "UPDATE dbo.BoPhan SET TenBoPhan='" + TenBoPhan + "', NgayThanhLap ='" + NgayThanhLap + "', GhiChu = '"+GhiChu+"' WHERE MaBoPhan='" + MaBoPhan + "' ";
             SqlCommand a = new SqlCommand(sql_sua, conn);
 
             a.ExecuteNonQuery();
@@ -96,5 +96,7 @@ namespace taikhoan
                 Application.Exit();
             }
         }
+
+        
     }
 }

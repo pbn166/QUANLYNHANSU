@@ -30,20 +30,20 @@
         {
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.tb_mabp = new System.Windows.Forms.TextBox();
+            this.tb_mabp = new System.Windows.Forms.ComboBox();
+            this.dt_ngaythanhlap = new System.Windows.Forms.DateTimePicker();
+            this.tb_ghichu = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.tb_tenbp = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.luoidulieu = new System.Windows.Forms.DataGridView();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.tb_tenbp = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.tb_ghichu = new System.Windows.Forms.TextBox();
-            this.dt_ngaythanhlap = new System.Windows.Forms.DateTimePicker();
-            this.btn_them = new System.Windows.Forms.Button();
-            this.btn_sua = new System.Windows.Forms.Button();
-            this.btn_xoa = new System.Windows.Forms.Button();
             this.btn_thoat = new System.Windows.Forms.Button();
+            this.btn_xoa = new System.Windows.Forms.Button();
+            this.btn_sua = new System.Windows.Forms.Button();
+            this.btn_them = new System.Windows.Forms.Button();
+            this.luoidulieu = new System.Windows.Forms.DataGridView();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.luoidulieu)).BeginInit();
@@ -61,13 +61,13 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.tb_mabp);
             this.groupBox1.Controls.Add(this.dt_ngaythanhlap);
             this.groupBox1.Controls.Add(this.tb_ghichu);
             this.groupBox1.Controls.Add(this.label5);
             this.groupBox1.Controls.Add(this.tb_tenbp);
             this.groupBox1.Controls.Add(this.label4);
             this.groupBox1.Controls.Add(this.label3);
-            this.groupBox1.Controls.Add(this.tb_mabp);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Location = new System.Drawing.Point(12, 75);
             this.groupBox1.Name = "groupBox1";
@@ -78,10 +78,63 @@
             // 
             // tb_mabp
             // 
-            this.tb_mabp.Location = new System.Drawing.Point(229, 37);
+            this.tb_mabp.FormattingEnabled = true;
+            this.tb_mabp.Items.AddRange(new object[] {
+            "BP01",
+            "BP02",
+            "BP03"});
+            this.tb_mabp.Location = new System.Drawing.Point(229, 36);
             this.tb_mabp.Name = "tb_mabp";
-            this.tb_mabp.Size = new System.Drawing.Size(247, 31);
-            this.tb_mabp.TabIndex = 1;
+            this.tb_mabp.Size = new System.Drawing.Size(247, 33);
+            this.tb_mabp.TabIndex = 3;
+            // 
+            // dt_ngaythanhlap
+            // 
+            this.dt_ngaythanhlap.Location = new System.Drawing.Point(229, 99);
+            this.dt_ngaythanhlap.Name = "dt_ngaythanhlap";
+            this.dt_ngaythanhlap.Size = new System.Drawing.Size(247, 31);
+            this.dt_ngaythanhlap.TabIndex = 2;
+            // 
+            // tb_ghichu
+            // 
+            this.tb_ghichu.Location = new System.Drawing.Point(880, 101);
+            this.tb_ghichu.Name = "tb_ghichu";
+            this.tb_ghichu.Size = new System.Drawing.Size(247, 31);
+            this.tb_ghichu.TabIndex = 1;
+            // 
+            // label5
+            // 
+            this.label5.AutoSize = true;
+            this.label5.Location = new System.Drawing.Point(709, 107);
+            this.label5.Name = "label5";
+            this.label5.Size = new System.Drawing.Size(86, 25);
+            this.label5.TabIndex = 0;
+            this.label5.Text = "Ghi chú";
+            // 
+            // tb_tenbp
+            // 
+            this.tb_tenbp.Location = new System.Drawing.Point(880, 30);
+            this.tb_tenbp.Name = "tb_tenbp";
+            this.tb_tenbp.Size = new System.Drawing.Size(247, 31);
+            this.tb_tenbp.TabIndex = 1;
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Location = new System.Drawing.Point(709, 36);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(133, 25);
+            this.label4.TabIndex = 0;
+            this.label4.Text = "Tên bộ phận";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(58, 107);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(157, 25);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Ngày thành lập";
             // 
             // label2
             // 
@@ -105,87 +158,16 @@
             this.groupBox2.TabStop = false;
             this.groupBox2.Text = "Các chức năng";
             // 
-            // luoidulieu
+            // btn_thoat
             // 
-            this.luoidulieu.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
-            this.luoidulieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.luoidulieu.Location = new System.Drawing.Point(12, 389);
-            this.luoidulieu.Name = "luoidulieu";
-            this.luoidulieu.RowHeadersWidth = 82;
-            this.luoidulieu.RowTemplate.Height = 33;
-            this.luoidulieu.Size = new System.Drawing.Size(1192, 324);
-            this.luoidulieu.TabIndex = 3;
-            this.luoidulieu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.luoidulieu_CellContentClick);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(58, 107);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(157, 25);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Ngày thành lập";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(709, 36);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(133, 25);
-            this.label4.TabIndex = 0;
-            this.label4.Text = "Tên bộ phận";
-            // 
-            // tb_tenbp
-            // 
-            this.tb_tenbp.Location = new System.Drawing.Point(880, 30);
-            this.tb_tenbp.Name = "tb_tenbp";
-            this.tb_tenbp.Size = new System.Drawing.Size(247, 31);
-            this.tb_tenbp.TabIndex = 1;
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(709, 107);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(86, 25);
-            this.label5.TabIndex = 0;
-            this.label5.Text = "Ghi chú";
-            // 
-            // tb_ghichu
-            // 
-            this.tb_ghichu.Location = new System.Drawing.Point(880, 101);
-            this.tb_ghichu.Name = "tb_ghichu";
-            this.tb_ghichu.Size = new System.Drawing.Size(247, 31);
-            this.tb_ghichu.TabIndex = 1;
-            // 
-            // dt_ngaythanhlap
-            // 
-            this.dt_ngaythanhlap.Location = new System.Drawing.Point(229, 99);
-            this.dt_ngaythanhlap.Name = "dt_ngaythanhlap";
-            this.dt_ngaythanhlap.Size = new System.Drawing.Size(247, 31);
-            this.dt_ngaythanhlap.TabIndex = 2;
-            // 
-            // btn_them
-            // 
-            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_them.Location = new System.Drawing.Point(91, 43);
-            this.btn_them.Name = "btn_them";
-            this.btn_them.Size = new System.Drawing.Size(137, 54);
-            this.btn_them.TabIndex = 0;
-            this.btn_them.Text = "Thêm";
-            this.btn_them.UseVisualStyleBackColor = true;
-            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
-            // 
-            // btn_sua
-            // 
-            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_sua.Location = new System.Drawing.Point(318, 43);
-            this.btn_sua.Name = "btn_sua";
-            this.btn_sua.Size = new System.Drawing.Size(129, 54);
-            this.btn_sua.TabIndex = 1;
-            this.btn_sua.Text = "Sửa";
-            this.btn_sua.UseVisualStyleBackColor = true;
-            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
+            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_thoat.Location = new System.Drawing.Point(781, 43);
+            this.btn_thoat.Name = "btn_thoat";
+            this.btn_thoat.Size = new System.Drawing.Size(124, 54);
+            this.btn_thoat.TabIndex = 3;
+            this.btn_thoat.Text = "Thoát";
+            this.btn_thoat.UseVisualStyleBackColor = true;
+            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
             // 
             // btn_xoa
             // 
@@ -198,16 +180,39 @@
             this.btn_xoa.UseVisualStyleBackColor = true;
             this.btn_xoa.Click += new System.EventHandler(this.btn_xoa_Click);
             // 
-            // btn_thoat
+            // btn_sua
             // 
-            this.btn_thoat.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btn_thoat.Location = new System.Drawing.Point(781, 43);
-            this.btn_thoat.Name = "btn_thoat";
-            this.btn_thoat.Size = new System.Drawing.Size(124, 54);
-            this.btn_thoat.TabIndex = 3;
-            this.btn_thoat.Text = "Thoát";
-            this.btn_thoat.UseVisualStyleBackColor = true;
-            this.btn_thoat.Click += new System.EventHandler(this.btn_thoat_Click);
+            this.btn_sua.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_sua.Location = new System.Drawing.Point(318, 43);
+            this.btn_sua.Name = "btn_sua";
+            this.btn_sua.Size = new System.Drawing.Size(129, 54);
+            this.btn_sua.TabIndex = 1;
+            this.btn_sua.Text = "Sửa";
+            this.btn_sua.UseVisualStyleBackColor = true;
+            this.btn_sua.Click += new System.EventHandler(this.btn_sua_Click);
+            // 
+            // btn_them
+            // 
+            this.btn_them.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.875F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btn_them.Location = new System.Drawing.Point(91, 43);
+            this.btn_them.Name = "btn_them";
+            this.btn_them.Size = new System.Drawing.Size(137, 54);
+            this.btn_them.TabIndex = 0;
+            this.btn_them.Text = "Thêm";
+            this.btn_them.UseVisualStyleBackColor = true;
+            this.btn_them.Click += new System.EventHandler(this.btn_them_Click);
+            // 
+            // luoidulieu
+            // 
+            this.luoidulieu.BackgroundColor = System.Drawing.SystemColors.ButtonFace;
+            this.luoidulieu.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.luoidulieu.Location = new System.Drawing.Point(12, 389);
+            this.luoidulieu.Name = "luoidulieu";
+            this.luoidulieu.RowHeadersWidth = 82;
+            this.luoidulieu.RowTemplate.Height = 33;
+            this.luoidulieu.Size = new System.Drawing.Size(1192, 324);
+            this.luoidulieu.TabIndex = 3;
+            this.luoidulieu.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.luoidulieu_CellContentClick);
             // 
             // BoPhan
             // 
@@ -237,7 +242,6 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.GroupBox groupBox2;
         private System.Windows.Forms.DataGridView luoidulieu;
-        private System.Windows.Forms.TextBox tb_mabp;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TextBox tb_ghichu;
         private System.Windows.Forms.Label label5;
@@ -249,5 +253,6 @@
         private System.Windows.Forms.Button btn_xoa;
         private System.Windows.Forms.Button btn_sua;
         private System.Windows.Forms.Button btn_them;
+        private System.Windows.Forms.ComboBox tb_mabp;
     }
 }

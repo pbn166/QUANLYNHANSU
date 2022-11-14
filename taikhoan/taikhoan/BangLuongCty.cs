@@ -16,7 +16,7 @@ namespace taikhoan
         public SqlConnection conn;
         public void Ketnoi()
         {
-            string chuoiketnoi = "Server = DESKTOP-VSFCU84; Database = QLNS; integrated security= True";
+            string chuoiketnoi = "Server = DESKTOP-JC1GAQM\\SQLEXPRESS; Database = QLNS; integrated security= True";
             conn = new SqlConnection(chuoiketnoi);
             conn.Open();
 
@@ -25,9 +25,9 @@ namespace taikhoan
         {
             SqlDataAdapter da = new SqlDataAdapter(cautruyvan, conn);
             DataSet ds = new DataSet();
-            da.Fill(ds, "DSPB");
+            da.Fill(ds, "DSLCT");
             dg.DataSource = ds;
-            dg.DataMember = "DSPB";
+            dg.DataMember = "DSLCT";
 
         }
         public BangLuongCty()
@@ -38,54 +38,54 @@ namespace taikhoan
         private void BangLuongCty_Load(object sender, EventArgs e)
         {
             Ketnoi();
-            HienthiDuLieu("SELECT * FROM dbo.BangLuongCty", luoidulieu);
+            HienthiDuLieu("SELECT * FROM dbo.BangLuongCTy", luoidulieu);
         }
 
         private void luoidulieu_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
             tb_maluong.Text = luoidulieu.Rows[e.RowIndex].Cells[0].Value.ToString();
             tb_luongcb.Text = luoidulieu.Rows[e.RowIndex].Cells[1].Value.ToString();
-            tb_pccchucvu.Text = luoidulieu.Rows[e.RowIndex].Cells[2].Value.ToString();
+            tb_pcchucvu.Text = luoidulieu.Rows[e.RowIndex].Cells[2].Value.ToString();
             tb_ghichu.Text = luoidulieu.Rows[e.RowIndex].Cells[3].Value.ToString();
         }
 
         private void btn_them_Click(object sender, EventArgs e)
         {
-            string MaLuong = tb_luongcb.Text;
+            string MaLuong = tb_maluong.Text; 
             string LCB = tb_luongcb.Text;
-            string PCCChucvu = tb_pccchucvu.Text;
+            string PCChucVu = tb_pcchucvu.Text;
             string GhiChu = tb_ghichu.Text;
 
-            SqlCommand sql_them = new SqlCommand("INSERT INTO dbo.BangLuongCty VALUES " + "('"+tb_maluong.Text+"','"+tb_luongcb.Text+"', '"+tb_pccchucvu.Text+"', '"+tb_ghichu.Text+"')", conn);
+            SqlCommand sql_them = new SqlCommand("INSERT INTO dbo.BangLuongCty VALUES " + "('"+MaLuong+"','"+LCB+"', '"+PCChucVu+"', '"+GhiChu+"')", conn);
             sql_them.ExecuteNonQuery();
             MessageBox.Show("Thêm thành công");
-            HienthiDuLieu("SELECT * FROM dbo.BangLuongCty", luoidulieu);
+            HienthiDuLieu("SELECT * FROM dbo.BangLuongCTy", luoidulieu);
         }
 
         private void btn_sua_Click(object sender, EventArgs e)
         {
-            string MaLuong = tb_luongcb.Text;
+            string MaLuong = tb_maluong.Text;
             string LCB = tb_luongcb.Text;
-            string PCCChucvu = tb_pccchucvu.Text;
+            string PCChucVu = tb_pcchucvu.Text;
             string GhiChu = tb_ghichu.Text;
 
-            string sql_sua = "UPDATE dbo.BangLuongCty SET LCB='" + LCB + "', PCCChucVu ='" + PCCChucvu + "' WHERE MaLuong='" + MaLuong + "' ";
+            string sql_sua = "UPDATE dbo.BangLuongCTy SET LCB='" + LCB + "', PCChucVu ='" + PCChucVu + "', GhiChu = '"+GhiChu+"' WHERE MaLuong='" + MaLuong + "' ";
             SqlCommand a = new SqlCommand(sql_sua, conn);
 
             a.ExecuteNonQuery();
             MessageBox.Show("Sửa thành công");
-            HienthiDuLieu("SELECT * FROM dbo.BangCongCty", luoidulieu);
+            HienthiDuLieu("SELECT * FROM dbo.BangLuongCTy", luoidulieu);
         }
 
         private void btn_xoa_Click(object sender, EventArgs e)
         {
             String ma_luong = tb_maluong.Text;
-            String sqlXoa = "DELETE FROM dbo.BangCongCty WHERE MaLuong = '" + ma_luong + "' ";
+            String sqlXoa = "DELETE FROM dbo.BangLuongCTy WHERE MaLuong = '" + ma_luong + "' ";
             SqlCommand comm = new SqlCommand(sqlXoa, conn);
             comm.ExecuteNonQuery();
             MessageBox.Show("Xóa thành công");
 
-            HienthiDuLieu("SELECT * FROM db0.BangCongCty", luoidulieu);
+            HienthiDuLieu("SELECT * FROM db0.BangLuongCTy", luoidulieu);
         }
 
         private void btn_thoat_Click(object sender, EventArgs e)
